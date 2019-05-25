@@ -124,11 +124,12 @@ public class MainActivity extends AppCompatActivity {
             lastTime = SystemClock.elapsedRealtime();
             //updating t1 : t1=t2=current time
 
-            if(deltaTime!=0)
-            angAcc = (float) (Math.sqrt(Math.pow(angVelocity[0]-lastAngVelocity[0], 2) +
-                    Math.pow(angVelocity[1]-lastAngVelocity[1], 2)
-                    + Math.pow(angVelocity[2]-lastAngVelocity[2], 2)))/deltaTime;
-            angAcc*=1000;
+            if(deltaTime!=0) {
+                angAcc = (float) (Math.sqrt(Math.pow(angVelocity[0] - lastAngVelocity[0], 2) +
+                        Math.pow(angVelocity[1] - lastAngVelocity[1], 2)
+                        + Math.pow(angVelocity[2] - lastAngVelocity[2], 2))) / deltaTime;
+                angAcc *= 1000;
+            }
             // calculating net angular acceleration using
             // (change in ang velocity) / (change in time)
             // Units : rad/(s^2)
